@@ -7,7 +7,7 @@ set -o errexit -o nounset -o pipefail
 # This script does the following:
 # 1. Ask user for her GitHub username and Ethereum address (eth_addr)
 # 2. Negotiate with user which SSH key to use
-# 3. Find at least one match of key and encrypted_key that decrypts succesfully
+# 3. Find at least one match of key and encrypted_key that decrypts successfully
 # 4. Decrypt encrypted_key to tmp_eth_key
 # 5. Sign sender ethereum address: sign[tmp_eth_key](eth_addr)
 # 6. Encode signature (#5) and merkle proof and output result
@@ -168,7 +168,7 @@ while true; do
     done
 
     if [ -e "$DECRYPTED_DATA" ]; then
-        # echo "Decrypted succesfully! Decrypted data is at $DECRYPTED_DATA"
+        # echo "Decrypted successfully! Decrypted data is at $DECRYPTED_DATA"
         break
     else
         echo "Couldn't decrypt with that SSH key, please choose another one."
